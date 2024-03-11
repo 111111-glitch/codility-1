@@ -19,7 +19,7 @@ def Solution(A, D):
     #setting the date format
     for amount, date in zip(A, D):
         #not sure 
-         month = int(date.split('-')[1]) #split date by - 
+         month = int(date.split('-')[1]) #split date by (-) 
        
 
         # checking if amount is < 0 then that's a card payment else that is an incoming transfer
@@ -38,11 +38,9 @@ def Solution(A, D):
 
     return balance
 
-A = [-60,60,-40,-20]
-D = ["2020-10-01" ,"2020-02-02" ,"2020-10-10" ,"2020-10-30"]
+
 print(Solution([-60,60,-40,-20], ["2020-10-01" ,"2020-02-02" ,"2020-10-10" ,"2020-10-30"]))
      
-
 
     
    
