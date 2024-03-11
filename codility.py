@@ -34,7 +34,7 @@ def Solution(A, D):
         # Deducting 5 shillings for an account that has a card unless 3 minimum payments have been made and amount to 100 shillings
         # to check the number of payments in a month I will check the length of the card payments and if the sum of those amounts are 100
     for month in range(1, 12):        
-         if month in card_payments and len(card_payments[month]) >= 3 and sum(card_payments[month]) >= 100:
+         if month in card_payments and len(card_payments[month]) < 3 and sum(card_payments[month]) < 100:
             balance -= 5  # if it doesn't satisfy the above, the balance will be deducted by 5
 
     return balance
